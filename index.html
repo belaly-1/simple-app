@@ -25,13 +25,15 @@
     }
     h1 { margin-bottom: 16px; font-size: 2rem; }
     p { color: #aaa; margin-bottom: 24px; }
+    .buttons { display: flex; gap: 16px; justify-content: center; }
     button {
       background: #e94560;
       color: white;
       border: none;
-      padding: 12px 32px;
-      border-radius: 8px;
-      font-size: 1rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      font-size: 1.5rem;
       cursor: pointer;
       transition: transform 0.1s;
     }
@@ -50,7 +52,10 @@
     <h1>Hello World</h1>
     <p>A simple locally-hosted app</p>
     <div id="count">0</div>
-    <button onclick="document.getElementById('count').textContent = ++n">Click Me</button>
+    <div class="buttons">
+      <button onclick="document.getElementById('count').textContent = --n">−</button>
+      <button onclick="document.getElementById('count').textContent = ++n">+</button>
+    </div>
   </div>
   <script>let n = 0;</script>
 </body>
