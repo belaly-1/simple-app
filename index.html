@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple App</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      color: #eee;
+    }
+    .card {
+      background: #16213e;
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      max-width: 420px;
+    }
+    h1 { margin-bottom: 16px; font-size: 2rem; }
+    p { color: #aaa; margin-bottom: 24px; }
+    button {
+      background: #e94560;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    button:hover { transform: scale(1.05); }
+    button:active { transform: scale(0.95); }
+    #count {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 24px 0;
+      color: #e94560;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hello World</h1>
+    <p>A simple locally-hosted app</p>
+    <div id="count">0</div>
+    <button onclick="document.getElementById('count').textContent = ++n">Click Me</button>
+  </div>
+  <script>let n = 0;</script>
+</body>
+</html>
